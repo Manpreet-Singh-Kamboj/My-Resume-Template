@@ -1,0 +1,196 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage[margin=1.4cm]{geometry}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.15in}
+ \addtolength{\textwidth}{0.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}\vspace{0pt}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Large \scshape Manpreet Singh} \\[2mm]
+    \footnotesize \raisebox{-0.1\height}
+    \faPhone\ \underline{9915567048} ~ 
+    {\faEnvelope\  \underline{manpreetkamboj60.net@gmail.com}} ~ 
+    {\faLinkedin\ \underline{\href{https://www.linkedin.com/in/manpreet-singh-01-}{linkedin.com/in/manpreet-singh-01-}}  ~
+    {\faGithub\ \underline{\href{https://github.com/Manpreet-Singh-Kamboj}{github.com/Manpreet-Singh-Kamboj}} ~
+    {\faBriefcase\ \underline{\href{https://manpreets-portfolio.vercel.app/}{manpreets-portfolio.vercel.app/}}
+    \vspace{-8pt}
+\end{center}
+
+ %-----------EDUCATION-----------
+\section{Education} \\[1mm]
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chitkara University}{Expected Graduation: July 2025}
+      {Bachelor of Engineering | Major Computer Science
+      }{Rajpura, Punjab, India}
+  \resumeSubHeadingListEnd
+    \resumeItemListStart
+        \resumeItem {Golden Key Honours Scholar | \textbf{CGPA: 9.10/10}}
+        \vspace{-7pt}
+        \resumeItem {Courses: Object Oriented Software Engineering, Algorithm Design \& Implementation , Operating Systems, System Design, Front-end Engineering , Back-end Engineering , Advanced Data Structures \& Algorithms, Full Stack Engineering}
+    \resumeItemListEnd
+    \vspace{-12pt}
+%-----------Experience---------------
+\section{Work Experience}
+    \resumeSubHeadingListStart
+                \resumeSubheading{Salescode.ai}{June 2024 -- December 2024}{Software Engineer Intern}{Gurugram, India} 
+                \resumeItemListStart
+                    \resumeItem{Achieved \textbf{30\% performance improvement} in load times by refactoring the \textbf{HomeScreen}, unifying widgets, and optimizing content rendering workflows.}
+                    \resumeItem{Developed the \textbf{BannerV2 Framework} to deliver targeted, dynamic banners based on user preferences, locale settings, and promotional schemes, boosting user engagement by 25\% and driving a 15\% increase in click-through rates.}
+                    \resumeItem{Designed and implemented the \textbf{Skill Dashboard Framework}, providing users with an interactive platform to track analytics and proficiency levels, resulting in a 20\% increase in user engagement and a 15\% improvement in satisfaction scores through personalized insights.}
+                    \resumeItemListEnd
+            \resumeSubheading{Bharat Intern}{October 2023 -- November 2023}{Web Developer Intern}{Remote}
+                \resumeItemListStart
+                    \resumeItem{Built a Netflix website clone using \textbf{HTML, CSS, and JavaScript}, improving front-end development expertise and mastering responsive design techniques.}
+                    \resumeItem{Integrated back-end functionality with \textbf{Express.js}, enabling dynamic content rendering and enhancing knowledge of server-side development.}
+                    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \vspace{-12pt}
+
+%-----------PROJECTS-----------
+\section{Projects} 
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+            {\textbf{{DevOverflow}} $|$ \emph{\href{https://devoverflow-community.vercel.app/}{Website}{ $|$ }\href{https://github.com/Manpreet3033/DevOverflow.git}{Source Code}}}{Next.js $|$ Server Actions $|$ MongoDB}
+            \\[5mm]
+          \resumeItemListStart
+            \resumeItem{Developed and deployed a full-stack platform that fostered collaboration and knowledge exchange among \textbf{Developers}, providing a space for asking questions, sharing insights, and building a vibrant community similar to StackOverflow.}}
+            \resumeItem{Utilized \textbf{MongoDB} for data storage, \textbf{Next.js server actions} for backend functionality, and \textbf{Next.js} for creating a responsive and dynamic frontend interface.}
+          \resumeItemListEnd
+ \vspace{-20pt}
+ \resumeProjectHeading
+            {\textbf{{Study Adda}} $|$ \emph{\href{https://study-adda-edtech.vercel.app/}{Website} { $|$ }\href{https://github.com/Manpreet3033/StudyAdda_LMS}{Source Code}}}{ReactJS $|$ MongoDB $|$ Express.js $|$ Node.js}
+            \\[5mm]
+          \resumeItemListStart
+            \resumeItem{\textbf{Led the development} of a full-stack EdTech platform for \textbf{students and instructors}, utilizing \textbf{ReactJS} for the frontend, \textbf{Node.js} and \textbf{Express.js} for the backend, and \textbf{MongoDB} as the database.}
+          \resumeItemListEnd
+ \vspace{-17pt}
+ \resumeProjectHeading
+{\textbf{{Facial Recognition Attendace System}} $|$ \emph{\href{https://github.com/Manpreet3033/Facial_Attendance_System}{Source Code}}}{Pandas $|$ Tkinter $|$ Python $|$ Numpy}
+\\[5mm]
+\resumeItemListStart
+\resumeItem{Created a facial attendance system, utilizing \textbf{Pandas} for attendance updates, \textbf{NumPy} for data processing, and \textbf{Tkinter} for the graphical user interface (GUI).}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-28pt}
+%-----------LEADERSHIP-----------
+\section{Leadership} 
+    \vspace{-8pt}
+    \resumeSubHeadingListStart
+                   \resumeProjectHeading
+            {\textbf{{Project Leadership}}}{Dec 2023}
+            \\[5mm]
+          \resumeItemListStart
+            \resumeItem{\textbf{Presented technical insights} on my \textbf{MERN Stack project} "Study Adda" an \textbf{EdTech platform}) to classmates, showcasing full-stack development concepts and practical applications.}
+          \resumeItemListEnd
+          \resumeSubHeadingListEnd
+ \vspace{-12pt}
+  %-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{   
+     \textbf{Languages}{: Python, Java, SQL, HTML5, CSS, JavaScript, C++, Dart} \\[1mm]
+     \textbf{Developer Tools}{: Postman, Git, Jira, Confluence, Visual Studio Code} \\[1mm]
+     \textbf{Libraries/Frameworks}{: Spring Boot, ReactJS, PostgreSQL, MongoDB, NextJS, NodeJS, ExpressJS, Flutter, React Native} \\ [1mm]
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+ \vspace{3pt}
+\vspace{10pt}
+
+\vspace{-15pt}
+
+
+
+\end{document}
