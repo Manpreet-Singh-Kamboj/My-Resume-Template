@@ -1,0 +1,194 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  pdfborderstyle={/S/U/W 1}
+}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage[margin=1cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.15in}
+\addtolength{\textwidth}{0.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\huge \textbf{\scshape Manpreet Singh}} \\[2mm]
+    \small Waterloo, ON $|$
+    (416) 930-4426
+    $|$ \href{mailto:sing2470@mylaurier.ca}{\underline{sing2470@mylaurier.ca}} $|$ 
+    \href{https://www.linkedin.com/in/manpreet-swe/}{\underline{linkedin.com/in/manpreet-swe}} $|$
+    \href{https://github.com/Manpreet-Singh-Kamboj}{\underline{github.com/Manpreet-Singh-Kamboj}}
+\end{center}
+\vspace{-19pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Wilfrid Laurier University}{Sep\space2025 \space -- \space Present}
+      {\normalfont Master of Applied Computing (Co-op)}{\normalfont GPA: 3.9 / 4}
+    \vspace{-4pt}
+    \resumeSubheading
+      {Chitkara University}{Jul\space2021 \space -- \space Aug\space2025}
+      {\normalfont Bachelor of Engineering (Computer Science)}{\normalfont GPA: 3.7 / 4}
+\resumeSubHeadingListEnd
+
+\vspace{-13.75pt}
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+    \vspace{-2pt}
+    \resumeSubheading
+      {CoreAI Technologies}{Jun\space2025 \space -- \space Dec\space2025}
+      {Software Developer}{Remote}
+    \resumeItemListStart
+        \resumeItem{Built health tracking dashboard with \textbf{Next.js} and \textbf{TanStack Query} for data fetching and caching, visualizing biomarker trends using \textbf{Recharts} with customizable pinning, target thresholds, and metric categorization.}
+        \resumeItem{Developed Health Snapshot categorization system organizing biomarkers across blood, cardiovascular, and performance metrics with detailed information pages, simplifying health tracking workflows.}
+        \resumeItem{Implemented guest PIN access feature in production Android Smart Lock app using \textbf{Kotlin} and \textbf{Seam SDK}, enabling temporary door access with NFC authentication, PIN validation, and expiration handling logic.}
+    \resumeItemListEnd
+    \vspace{-1pt}
+    \resumeSubheading
+      {SalesCode.ai}{Jun\space2024 \space -- \space Dec\space2024}
+      {Software Engineer Intern}{Gurugram, India}
+    \resumeItemListStart
+        \resumeItem{Built geo-targeted advertisement banner system using \textbf{Spring Boot}, custom \textbf{Flutter} widgets, \textbf{AWS S3} for banner storage, and deployed on \textbf{AWS EC2} with auto-scaling, serving 100K+ sales reps, achieving 15\% higher CTR.}
+        \resumeItem{Optimized \textbf{Flutter} app performance through widget refactoring and lazy loading patterns, reducing memory footprint from \textbf{89MB} to around \textbf{62MB}, improving overall app performance.}
+        \resumeItem{Collaborated with 5 engineers in \textbf{Agile} sprints to deliver 5+ production \textbf{Flutter} features, implementing \textbf{unit tests} and incorporating code review feedback reducing post-release bugs.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\vspace{-15pt}
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+    \vspace{-3pt}
+    \resumeProjectHeading
+        {\textbf{Qure} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-frontend}{\underline{Frontend}}} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-backend}{\underline{Backend}}}}{Node.js, Express.js, React Native, PostgreSQL, Socket.IO, Redis, Docker}
+    \resumeItemListStart
+        \resumeItem{Developed full-stack clinic queue management system with \textbf{Node.js/TypeScript} backend, \textbf{React Native} mobile app, and role-based access supporting patient, staff, and administrator workflows with \textbf{JWT}-based authentication.}
+        \resumeItem{Engineered real-time queue system using \textbf{Socket.IO} room-based architecture for instant updates and implemented fault-tolerant token management using atomic \textbf{PostgreSQL} transactions to prevent race conditions.}
+        \resumeItem{Built asynchronous job processing pipeline using \textbf{BullMQ} and \textbf{Redis} for \textbf{Cloudinary} image uploads, containerized with \textbf{Docker} and \textbf{Docker Compose} for local development, and deployed to \textbf{Render} cloud platform.}
+    \resumeItemListEnd
+    \vspace{-7pt}
+    \resumeProjectHeading
+        {\textbf{MyTrackr} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/my-trackr}{\underline{Source Code}}}}{Java, XML, Android, Firebase, Gemini SDK, ML Kit, Cloudinary}
+    \resumeItemListStart
+        \resumeItem{Developed Android expense tracking app using \textbf{ML Kit} OCR and \textbf{Gemini AI} for automated receipt scanning, reducing manual data entry time by 80\% and improving expense categorization accuracy.}
+        \resumeItem{Implemented automated budget tracking with real-time expense aggregation, multilingual support, CSV/PDF export, and cloud-synced receipt storage, simplifying financial management for users.}
+    \resumeItemListEnd
+    \vspace{-7pt}
+    \resumeProjectHeading
+        {\textbf{Study Adda} \textbar{} \emph{\href{https://study-adda-edtech.vercel.app/}{\underline{Demo}}} \textbar{} \emph{\href{https://github.com/Manpreet3033/StudyAdda_LMS}{\underline{Source Code}}}}{React.js, MongoDB, Express.js, Node.js, Javascript}
+    \resumeItemListStart
+        \resumeItem{Built student and instructor portal LMS using \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js}, and \textbf{MongoDB} with \textbf{JWT} auth, \textbf{Razorpay} payments, video streaming, instructor analytics, and time-based discounts.}
+        \resumeItem{Implemented course creation, enrollment tracking, progress monitoring, and \textbf{Cloudinary} media management.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-13.5pt}
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Activities}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+        {\textbf{SKILLVARZ 1.0 Hackathon} \textbar{} \emph{Semifinalist}}{May 2025}
+    \resumeItemListStart
+        \resumeItem{Built immersive 3D web experiences (\href{https://food-drone.vercel.app/}{\underline{Food Drone}} delivery simulation and \href{https://amaya-sable.vercel.app/}{\underline{Amaya Café}}) using \textbf{Three.js}, \textbf{React Three Fiber}, and \textbf{GSAP}, collaborating with a 5-member team.}
+    \resumeItemListEnd
+    \vspace{-7pt}
+    \resumeProjectHeading
+        {\textbf{Google Developer Student Clubs (GDSC), Chitkara University}}{Dec\space2022 \space -- \space Feb\space2024}
+    \resumeItemListStart
+        \resumeItem{Event Management Team Member - Coordinated logistics for technical hackathons with 100+ participants.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-13pt}
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages:} Java, JavaScript, TypeScript, Python, Kotlin, C++, SQL, Bash/Zsh \\[1.2mm]
+        \vspace{-3pt}
+        \textbf{Frameworks \& Libraries:} React.js, Next.js, Node.js, Express.js, React Native, Flutter, Spring Boot, Android SDK, Three.js, React Three Fiber, GSAP, Tanstack Query, Prisma \\[1.2mm]
+        \vspace{-3pt}
+        \textbf{Databases:} PostgreSQL, MongoDB, Firebase, Redis \\[1.2mm]
+        \vspace{-3pt}
+        \textbf{Tools \& Technologies:} AWS (EC2, S3, ECR), Docker, Git, Jira, BullMQ, Socket.IO, Slack, Word, Excel \\[1.2mm]
+        \vspace{-3pt}
+        \textbf{Core Competencies:} RESTful API Design, Real-time Systems, Mobile Development, Full-Stack Development, Database Design \& Optimization, Data Structures \& Algorithms, 3D Web Graphics, Unit Testing (Junit \& Jest)
+    }}
+\end{itemize}
+
+\end{document}
