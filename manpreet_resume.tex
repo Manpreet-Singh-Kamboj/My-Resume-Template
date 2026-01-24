@@ -22,6 +22,7 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 \usepackage[margin=1cm]{geometry}
+\usepackage[T1]{fontenc}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -95,11 +96,11 @@
 \section{Education}
 \resumeSubHeadingListStart
     \resumeSubheading
-      {Wilfrid Laurier University}{Sep\space2025 \space -- \space Present}
+      {Wilfrid Laurier University}{Sep\space2025 \space -- \space Apr\space2027}
       {\normalfont Master of Applied Computing (Co-op)}{\normalfont GPA: 3.9 / 4}
     \vspace{-4pt}
     \resumeSubheading
-      {Chitkara University}{Jul\space2021 \space -- \space Aug\space2025}
+      {Chitkara University}{Jul\space2021 \space -- \space May\space2025}
       {\normalfont Bachelor of Engineering (Computer Science)}{\normalfont GPA: 3.7 / 4}
 \resumeSubHeadingListEnd
 
@@ -112,16 +113,16 @@
       {CoreAI Technologies}{Jun\space2025 \space -- \space Dec\space2025}
       {Software Developer}{Remote}
     \resumeItemListStart
-        \resumeItem{Built health tracking dashboard with \textbf{Next.js} and \textbf{TanStack Query} for data fetching and caching, visualizing biomarker trends using \textbf{Recharts} with customizable pinning, target thresholds, and metric categorization.}
+        \resumeItem{Engineered a health dashboard using \textbf{Next.js} and \textbf{TanStack Query}, optimizing data fetching via custom caching and visualizing biomarker trends with interactive \textbf{Recharts} components.}
         \resumeItem{Developed Health Snapshot categorization system organizing biomarkers across blood, cardiovascular, and performance metrics with detailed information pages, simplifying health tracking workflows.}
-        \resumeItem{Implemented guest PIN access feature in production Android Smart Lock app using \textbf{Kotlin} and \textbf{Seam SDK}, enabling temporary door access with NFC authentication, PIN validation,  and expiration handling logic.}
+        \resumeItem{Implemented guest PIN access in Android Smart Lock app using \textbf{Kotlin} and \textbf{Seam SDK}, enabling temporary door access with NFC authentication, PIN validation, and expiration handling.}
     \resumeItemListEnd
     \vspace{-1pt}
     \resumeSubheading
       {SalesCode.ai}{Jun\space2024 \space -- \space Dec\space2024}
       {Software Engineer Intern}{Gurugram, India}
     \resumeItemListStart
-        \resumeItem{Built geo-targeted advertisement banner system using \textbf{Spring Boot (Java)}, custom \textbf{Flutter} widgets, \textbf{AWS S3} for banner storage, and deployed on \textbf{AWS EC2} with auto-scaling, serving 100K+ sales reps, achieving 15\% higher CTR.}
+        \resumeItem{Built geo-targeted banner system with \textbf{Spring Boot (Java)} backend, \textbf{Flutter} widgets, \textbf{AWS S3} storage, and \textbf{EC2} deployment with auto-scaling, serving 100K+ sales reps and achieving 15\% higher CTR.}
         \resumeItem{Optimized \textbf{Flutter} app performance through widget refactoring and lazy loading patterns, reducing memory footprint from \textbf{89MB} to around \textbf{62MB}, improving overall app performance.}
         \resumeItem{Collaborated with 5 engineers in \textbf{Agile/Scrum} sprints to deliver 5+ production \textbf{Flutter} features, implementing \textbf{unit tests} and incorporating code review feedback reducing post-release bugs.}
     \resumeItemListEnd
@@ -135,28 +136,30 @@
     \resumeProjectHeading
         {\textbf{Qure} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-frontend}{\underline{Frontend}}} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-backend}{\underline{Backend}}}}{Node.js, Express.js, React Native, PostgreSQL, Socket.IO, Redis, Docker}
     \resumeItemListStart
-        \resumeItem{Developed full-stack clinic queue management system with \textbf{Node.js/TypeScript} backend, \textbf{React Native} mobile app, and role-based access supporting patient, staff, and administrator workflows with \textbf{JWT}-based authentication.}
-        \resumeItem{Engineered real-time queue system using \textbf{Socket.IO} room-based architecture for instant updates and implemented fault-tolerant token management using atomic \textbf{PostgreSQL} transactions to prevent race conditions.}
-        \resumeItem{Built asynchronous job processing pipeline using \textbf{BullMQ} and \textbf{Redis} for \textbf{Cloudinary} image uploads reducing upload latency by \textbf{70\%}, then containerized with \textbf{Docker} and \textbf{Docker Compose} for local development, and deployed on \textbf{Render} cloud.}
+        \resumeItem{Developed full-stack clinic queue system with \textbf{Node.js/TypeScript} backend, \textbf{React Native} mobile app, role-based access for patient, staff, and admin workflows, with \textbf{JWT} authentication.}
+        \resumeItem{Engineered real-time queue system with \textbf{Socket.IO} room-based architecture achieving \textbf{<100ms latency}; implemented fault-tolerant token management via atomic \textbf{PostgreSQL} transactions to prevent race conditions.}
+        \resumeItem{Built asynchronous job pipeline with \textbf{BullMQ} and \textbf{Redis} for \textbf{Cloudinary} uploads, reducing upload latency by \textbf{70\%}. Containerized with \textbf{Docker} and deployed on \textbf{Render} cloud platform.}
     \resumeItemListEnd
     \vspace{-5pt}
     \resumeProjectHeading
         {\textbf{MyTrackr} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/my-trackr}{\underline{Source Code}}}}{Java, XML, Android, Firebase, Gemini SDK, ML Kit, Cloudinary}
     \resumeItemListStart
-        \resumeItem{Developed Android expense tracking app using \textbf{ML Kit} OCR and \textbf{Gemini AI} for automated receipt scanning, reducing manual data entry time by 80\% and improving expense categorization accuracy.}
-        \resumeItem{Implemented automated budget tracking with real-time expense aggregation, multilingual support, CSV/PDF export, and cloud-synced receipt storage, simplifying financial management for users.}
+        \resumeItem{Developed Android expense tracking app using \textbf{ML Kit} OCR and \textbf{Gemini AI} for automated receipt scanning with
+        \textbf{AlarmManager} based expiry notifications, reducing manual data entry time by 80\%.}
+        \resumeItem{Implemented automated budget tracking with real-time expense aggregation, multilingual support, CSV export,
+        cloud-synced \textbf{Cloudinary} receipt storage, and comprehensive \textbf{JUnit} test coverage.}
     \resumeItemListEnd
     \vspace{-5pt}
     \resumeProjectHeading
         {\textbf{Study Adda} \textbar{} \emph{\href{https://study-adda-edtech.vercel.app/}{\underline{Demo}}} \textbar{} \emph{\href{https://github.com/Manpreet3033/StudyAdda_LMS}{\underline{Source Code}}}}{React.js, MongoDB, Express.js, Node.js, Javascript}
     \resumeItemListStart
         \resumeItem{Built student and instructor portal LMS using \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js}, and \textbf{MongoDB} with \textbf{JWT} auth, \textbf{Razorpay} payments, video streaming, instructor analytics, and time-based discounts.}
-        \resumeItem{Implemented course creation, enrollment tracking, progress monitoring, and \textbf{Cloudinary} media management.}
+        \resumeItem{Implemented course creation workflow, student enrollment tracking, video progress monitoring with playback tracking, and \textbf{Cloudinary} media management for lecture uploads.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-\vspace{-13.5pt}
+\vspace{-14.75pt}
 %-----------LEADERSHIP & ACTIVITIES-----------
 \section{Leadership \& Activities}
 \resumeSubHeadingListStart
@@ -164,13 +167,13 @@
     \resumeProjectHeading
         {\textbf{SKILLVARZ 1.0 Hackathon} \textbar{} \emph{Semifinalist}}{May 2025}
     \resumeItemListStart
-        \resumeItem{Built immersive 3D web experiences (\href{https://food-drone.vercel.app/}{\underline{Food Drone}} delivery simulation and \href{https://amaya-sable.vercel.app/}{\underline{Amaya Café}}) using \textbf{Three.js}, \textbf{React Three Fiber}, and \textbf{GSAP}, collaborating with a 5-member team.}
+        \resumeItem{Built immersive 3D web experiences (\href{https://food-drone.vercel.app/}{\underline{Food Drone}} delivery simulation and \href{https://amaya-sable.vercel.app/}{\underline{Amaya Cafe}}) using \textbf{Three.js}, \textbf{React Three Fiber}, and \textbf{GSAP}, collaborating with a 5-member team.}
     \resumeItemListEnd
     \vspace{-5pt}
     \resumeProjectHeading
         {\textbf{Google Developer Student Clubs (GDSC), Chitkara University}}{Dec\space2022 \space -- \space Feb\space2024}
     \resumeItemListStart
-        \resumeItem{Event Management Team Member - Coordinated logistics for technical hackathons with 100+ participants.}
+        \resumeItem{Coordinated event planning, venue setup, and resource allocation for technical hackathons and events with 100+ participants.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -186,9 +189,9 @@
         \vspace{-3pt}
         \textbf{Databases:} PostgreSQL, MongoDB, Firebase, Redis \\[1.2mm]
         \vspace{-3pt}
-        \textbf{Tools \& Technologies:} AWS (EC2, S3, ECR), Docker, Git, Jira, BullMQ, Socket.IO, Word, Excel \\[1.2mm]
+        \textbf{Tools \& Technologies:} AWS (EC2, S3), Docker, Git, Jira, BullMQ, Socket.IO, RESTful API Design, Junit \& Jest \\[1.2mm]
         \vspace{-3pt}
-        \textbf{Core Competencies:} RESTful API Design, Real-time Systems, Mobile Development, Full-Stack Development, Database Design \& Optimization, Data Structures \& Algorithms, 3D Web Graphics, Unit Testing (Junit \& Jest)
+        \textbf{Core Competencies:} Real-time Systems, Mobile Development, Full-Stack Development, Database Design \& Optimization, Data Structures \& Algorithms, 3D Web Graphics
     }}
 \end{itemize}
 
