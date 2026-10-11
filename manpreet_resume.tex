@@ -1,5 +1,6 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{cmap}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -16,12 +17,11 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
 \usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
-\usepackage[margin=1cm]{geometry}
+
+% Pushing margins slightly further to guarantee 1-page fit
+\usepackage[left=0.2in, right=0.2in, top=0.20in, bottom=0.20in]{geometry}
 \usepackage[T1]{fontenc}
 
 \pagestyle{fancy}
@@ -30,20 +30,16 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.15in}
-\addtolength{\textwidth}{0.3in}
-
 \urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting - aggressive vertical space reduction
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -52,156 +48,142 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{0pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label={$\bullet$}, topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    {\huge \textbf{\scshape Manpreet Singh}} \\[2mm]
+    {\huge \textbf{\scshape Manpreet Singh}} \\[1mm]
     \small Waterloo, ON $|$
     (416) 930-4426
-    $|$ \href{mailto:sing2470@mylaurier.ca}{\underline{sing2470@mylaurier.ca}} $|$ 
-    \href{https://www.linkedin.com/in/manpreet-swe/}{\underline{linkedin.com/in/manpreet-swe}} $|$
-    \href{https://github.com/Manpreet-Singh-Kamboj}{\underline{github.com/Manpreet-Singh-Kamboj}}
+    $|$ \href{mailto:sing2470@mylaurier.ca}{sing2470@mylaurier.ca} 
+    $|$ \href{https://www.linkedin.com/in/manpreet-swe/}{LinkedIn} 
+    $|$ \href{https://github.com/Manpreet-Singh-Kamboj}{GitHub}
+    $|$ \href{https://leetcode.com/u/Manpreet_03/}{LeetCode}
 \end{center}
-\vspace{-19pt}
+\vspace{-16pt}
+
 
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
     \resumeSubheading
-      {Wilfrid Laurier University}{Sep\space2025 \space -- \space Apr\space2027}
-      {\normalfont Master of Applied Computing (Co-op)}{\normalfont GPA: 3.9 / 4}
-    \vspace{-4pt}
+      {Wilfrid Laurier University}{Sep 2025 -- Apr 2027}
+      {\normalfont Master of Applied Computing (Co-op)}{\normalfont GPA: 11.34 / 12}
     \resumeSubheading
-      {Chitkara University}{Jul\space2021 \space -- \space May\space2025}
+      {Chitkara University}{Jul 2021 -- May 2025}
       {\normalfont Bachelor of Engineering (Computer Science)}{\normalfont GPA: 3.7 / 4}
 \resumeSubHeadingListEnd
 
-\vspace{-12pt}
 %-----------EXPERIENCE-----------
 \section{Work Experience}
 \resumeSubHeadingListStart
-    \vspace{-2pt}
+\resumeSubheading
+  {Home Hardware Stores Limited}{May 2026 -- Present}
+  {eCommerce Full Stack Developer Co-op}{St. Jacobs, ON}
+\resumeItemListStart
+    \resumeItem{Building frontend features for the \textbf{Home Hardware Pro Dashboard} using \textbf{Vue.js} and \textbf{Svelte}, delivering reusable UI components and user stories across \textbf{Agile sprints} for \textbf{Pro-enrolled stores}.}
+    \resumeItem{Engineered distributed ETL pipelines using \textbf{Microsoft Fabric} and \textbf{PySpark} to ingest \textbf{250K+ daily POS transactions} across \textbf{1,100+ nationwide stores}, systematically extracting offline pricing, quantity, and loyalty (Scene/Moneris) metrics.}
+    \resumeItem{Engineered a cross-cloud ingestion pipeline to compute offline mode prices, storing aggregations in a \textbf{Fabric Delta Table} and deployed a serverless \textbf{GCP Cloud Function} to perform incremental, timestamp-based syncing into \textbf{Cloud SQL}.}
+\resumeItemListEnd
+
     \resumeSubheading
-      {CoreAI Technologies}{May\space2025 \space -- \space Oct\space2025}
-      {Software Developer}{Remote}
+      {CoreAI Technologies}{May 2025 -- Oct 2025}
+      {Full-Stack Software Developer}{Remote}
     \resumeItemListStart
-        \resumeItem{Engineered a health dashboard using \textbf{Next.js} and \textbf{TanStack Query}, optimizing data fetching via custom caching and visualizing biomarker trends with interactive \textbf{Recharts} components.}
-        \resumeItem{Developed Health Snapshot categorization system organizing \textbf{400+} biomarkers across blood, cardiovascular, and performance metrics with detailed information pages, simplifying health tracking workflows.}
-        \resumeItem{Implemented guest PIN access in Android Smart Lock app using \textbf{Kotlin} and \textbf{Seam SDK}, enabling temporary door access with NFC authentication, PIN validation, and expiration handling.}
+        \resumeItem{Developed a high-performance health analytics dashboard using \textbf{Next.js}, \textbf{React}, and \textbf{TanStack Query}, optimizing API data fetching via custom caching layers to seamlessly visualize complex biomarker trends.}
+        \resumeItem{Designed a comprehensive biomarker categorization system structuring \textbf{400+ unique metrics} across cardiovascular, blood, and performance profiles, streamlining backend data retrieval and simplifying frontend user navigation.}
     \resumeItemListEnd
-    \vspace{-1pt}
+
     \resumeSubheading
-      {SalesCode.ai}{Jun\space2024 \space -- \space Dec\space2024}
+      {SalesCode.ai}{Jun 2024 -- Dec 2024}
       {Software Engineer Intern}{Gurugram, India}
     \resumeItemListStart
-        \resumeItem{Built geo-targeted banner system with \textbf{Spring Boot (Java)} backend, \textbf{Flutter} widgets, \textbf{AWS S3} storage, and \textbf{EC2} deployment with auto-scaling, serving 100K+ sales reps and achieving 15\% higher CTR.}
-        \resumeItem{Optimized \textbf{Flutter} app performance through widget refactoring and lazy loading patterns, reducing memory footprint from \textbf{89MB} to around \textbf{62MB}, improving overall app performance.}
-        \resumeItem{Collaborated with 5 engineers in \textbf{Agile/Scrum} sprints to deliver 5+ production \textbf{Flutter} features, implementing \textbf{unit tests} and incorporating code review feedback to maintain production-grade code quality.}
+        \resumeItem{Architected a geo-targeted banner delivery system using \textbf{Java (Spring Boot)} REST APIs, deployed on an auto-scaling \textbf{AWS EC2 and S3} infrastructure to dynamically serve localized content to \textbf{100K+ sales representatives}, driving a \textbf{15\% increase in click-through rates}.}
+        \resumeItem{Spearheaded performance engineering for the \textbf{Flutter} mobile client, refactoring widget rendering pipelines and implementing lazy loading patterns to reduce the application memory footprint by \textbf{over 30\% (from 89MB to 62MB)}.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\vspace{-15pt}
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
-    \vspace{-3pt}
     \resumeProjectHeading
-        {\textbf{Qure} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-frontend}{\underline{Frontend}}} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-backend}{\underline{Backend}}}}{Node.js, Express.js, React Native, PostgreSQL, Socket.IO, Redis, Docker}
+        {\textbf{Qure} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-frontend}{Frontend}} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-backend}{Backend}}}{Node.js, Express.js, React Native, PostgreSQL, Socket.IO, Redis, Docker}
     \resumeItemListStart
-        \resumeItem{Developed a Full Stack clinic queue system using \textbf{Node.js} and \textbf{TypeScript}, solving real-time synchronization challenges for patient and admin workflows through \textbf{JWT} authentication and role-based access control.}
-        \resumeItem{Engineered real-time queue system with \textbf{Socket.IO} room-based architecture achieving \textbf{<100ms latency}; implemented fault-tolerant token management via atomic \textbf{PostgreSQL} transactions to prevent race conditions.}
-        \resumeItem{Built asynchronous job pipeline with \textbf{BullMQ} and \textbf{Redis} for \textbf{Cloudinary} uploads, reducing upload latency by \textbf{70\%}. Containerized with \textbf{Docker} and deployed on \textbf{Render} cloud platform.}
-    \resumeItemListEnd
-    \vspace{-5pt}
-    \resumeProjectHeading
-        {\textbf{MyTrackr} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/my-trackr}{\underline{Source Code}}}}{Java, XML, Android, Firebase, Gemini SDK, ML Kit, Cloudinary}
-    \resumeItemListStart
-        \resumeItem{Developed Android expense tracking app using \textbf{ML Kit} OCR and \textbf{Gemini AI} for automated receipt scanning with
-        \textbf{AlarmManager} based expiry notifications, reducing manual data entry time by 80\%.}
-        \resumeItem{Implemented automated budget tracking with real-time expense aggregation, multilingual support, CSV export,
-        cloud-synced \textbf{Cloudinary} receipt storage, and comprehensive \textbf{JUnit} test coverage.}
-    \resumeItemListEnd
-    \vspace{-5pt}
-    \resumeProjectHeading
-        {\textbf{Airbnb Price Analytics \& Geospatial Mapping} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/nyc-airbnb-price-prediction}{\underline{Source Code}}}}{Python, Scikit-Learn, Folium, Pandas}
-    \resumeItemListStart
-        \resumeItem{Engineered a \textbf{Scikit-Learn} pipeline with \textbf{GridSearchCV} tuning to analyze NYC rental trends and predict pricing.}
-        \resumeItem{Created an interactive Geospatial Heatmap using Folium to visualize price density across 36K+ listings, identifying neighborhood price clusters after rigorous IQR-based outlier removal.}
-        \resumeItem{Performed Exploratory Data Analysis (EDA) using Pandas, Matplotlib and Seaborn to handle missing values and perform feature scaling, ensuring data integrity for regression modeling.}
+        \resumeItem{Developed a full-stack clinic queue management system using \textbf{Node.js}, \textbf{TypeScript}, and a \textbf{Socket.IO} room architecture to push live queue updates to patients and staff, securing user workflows with role-based \textbf{JWT} authentication.}
+        \resumeItem{Engineered fault-tolerant token management using atomic \textbf{PostgreSQL} transactions, and implemented a \textbf{BullMQ/Redis} caching pipeline that reduced asset upload latency by \textbf{70\%}, containerizing the application via \textbf{Docker} for Render deployment.}
     \resumeItemListEnd
 
+    \resumeProjectHeading
+        {\textbf{PulseWatch} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/pulsewatch}{Source Code}}}{React, Node.js, Server-Sent Events (SSE), GenAI, Twilio, Docker}
+    \resumeItemListStart
+        \resumeItem{Built a real-time system monitoring platform utilizing a \textbf{React} frontend and \textbf{Node.js} backend to track API and website health, streaming live updates via \textbf{Server-Sent Events (SSE)} and using \textbf{GenAI} to generate incident summaries for faster debugging.}
+        \resumeItem{Implemented a multi-channel alerting pipeline routing production environment triggers to webhooks \textbf{(Slack, Discord)} and SMS (\textbf{Twilio}), significantly reducing team incident response times.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Skin Lesion Classification Platform} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/cp640-ml-skin-lesion-live-demo}{App Repo}} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/cp640-ml-project/tree/main/skin-lesion-classification}{ML Model Repo}}}{Python, Flask, React (Vite), REST APIs}
+    \resumeItemListStart
+        \resumeItem{Trained a multi-task deep learning model on a highly imbalanced 7-class dataset, successfully achieving a \textbf{0.753 melanoma recall} and \textbf{0.928 AUC-ROC} to significantly outperform the 67\% naive baseline.}
+        \resumeItem{Deployed an end-to-end medical classification application by building a \textbf{Flask} backend and REST APIs to serve real-time model predictions to a responsive \textbf{React} frontend.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\vspace{-14.75pt}
+%-----------CERTIFICATIONS-----------
+\vspace{-5pt}
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, parsep=0pt, itemsep=0pt]
+    \small{\item{
+     \textbf{AWS Certified Cloud Practitioner} -- Amazon Web Services \textbar{} \href{https://www.credly.com/badges/ea8fc583-bf8d-4b39-acbc-a88e1e47d2cd/public_url}{Verify} \hfill May 2026
+    }}
+ \end{itemize}
+ \vspace{-6pt}
+
 %-----------LEADERSHIP & ACTIVITIES-----------
+\vspace{-5pt}
 \section{Leadership \& Activities}
-\resumeSubHeadingListStart
+\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt]
+    \item \textbf{Instructional Assistant (System Programming)}, Wilfrid Laurier University \hfill Jan 2026 -- Apr 2026 \\
+    \small{Served as a technical problem solver for \textbf{50+ students} on Shell scripting and C programming, evaluating labs for code quality, memory management, and algorithmic readability.}
+    \item \textbf{Startup Build Hackathon 2026 by Sheryians Coding School} \textbar{} \emph{2nd Runner-Up} \hfill Jun 2026 \\
+    \small{Built PulseWatch backend architecture in an agile, fast-paced hackathon environment under a strict 48-hour deadline.}
+\end{itemize}
+\vspace{-6pt}
 
-    \resumeProjectHeading
-        {\textbf{Instructional Assistant (System Programming), Wilfrid Laurier University}}{Jan\space2026 \space -- \space Present}
-    \resumeItemListStart
-        \resumeItem{Acting as a technical problem solver for 50+ students regarding Shell scripting and C programming, while evaluating lab assignments to ensure high standards of logic and code readability.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading
-        {\textbf{SKILLVARZ 1.0 Hackathon} \textbar{} \emph{Semifinalist}}{May 2025}
-    \resumeItemListStart
-        \resumeItem{Built immersive 3D web experiences (\href{https://food-drone.vercel.app/}{\underline{Food Drone}} delivery simulation and \href{https://amaya-sable.vercel.app/}{\underline{Amaya Cafe}}) using \textbf{Three.js}, \textbf{React Three Fiber}, and \textbf{GSAP}, collaborating with a 5-member team.}
-    \resumeItemListEnd
-    \vspace{-5pt}
-
-\resumeSubHeadingListEnd
-
-\vspace{-13pt}
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, parsep=0pt, itemsep=2pt]
     \small{\item{
-        \textbf{Languages:} JavaScript, TypeScript, Java, Kotlin, Python, C++, HTML/CSS, SQL, Bash/Zsh \\[1.2mm]
-
-        \vspace{-3pt}
-        
-        \textbf{Web \& Backend Development:} React, Next.js, Node.js, Express, Spring Boot, Three.js, GSAP, TanStack Query \\[1.2mm]
-
-        \vspace{-3pt}
-        
-        \textbf{Mobile Development:} React Native, Flutter, Android SDK (Kotlin/Java), ML Kit, Firebase \\[1.2mm]
-
-        \vspace{-3pt}
-
-        \textbf{Data Science \& ML:} Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Folium, GridSearchCV \\[1.2mm]
-        
-        \vspace{-3pt}
-        
-        \textbf{Infrastructure \& Developer Tools:} AWS (EC2, S3), Docker, PostgreSQL, MongoDB, Redis, Git, Socket.IO, JUnit \& Jest \\[1.2mm]
+        \textbf{Languages:} Java, Python, TypeScript, JavaScript, SQL, C++, Kotlin, Bash/Zsh \\
+        \textbf{Web \& Backend:} Node.js, Express, Spring Boot, React, Next.js, Vue.js, Svelte, Flask, Socket.IO, TanStack Query \\
+        \textbf{Cloud \& Infrastructure:} AWS (EC2, S3), GCP, Docker, PostgreSQL, MongoDB, Redis, Git \\
+        \textbf{Data \& ML:} PySpark, Pandas, NumPy, Scikit-Learn, Matplotlib
     }}
 \end{itemize}
 

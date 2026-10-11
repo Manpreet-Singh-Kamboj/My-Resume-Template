@@ -1,5 +1,6 @@
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{cmap}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -7,27 +8,27 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[linktoc=all]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  pdfborderstyle={/S/U/W 1}
+}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
 \usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
-\usepackage[margin=1.4cm]{geometry}
 
+% Pushing margins slightly further to guarantee 1-page fit
+\usepackage[left=0.2in, right=0.2in, top=0.20in, bottom=0.20in]{geometry}
+\usepackage[T1]{fontenc}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.15in}
- \addtolength{\textwidth}{0.3in}
 
 \urlstyle{same}
 
@@ -35,10 +36,10 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting - aggressive vertical space reduction
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -47,141 +48,143 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{0pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+    {#1}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{0pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}\vspace{0pt}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label={$\bullet$}, topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    {\Large \scshape Manpreet Singh} \\[2mm]
-    \footnotesize \raisebox{-0.1\height}
-    \faPhone\ \underline{(416) 930-4426} ~ 
-    {\faEnvelope\  \underline{\href{mailto:manpreetkamboj60.net@gmail.com} {manpreetkamboj60.net@gmail.com}}} ~ 
-    {\faLinkedin\ \underline{\href{www.linkedin.com/in/manpreet-/}{linkedin.com/in/manpreet-}}}  ~
-    {\faGithub\ \underline{\href{https://github.com/Manpreet-Singh-Kamboj}{github.com/Manpreet-Singh-Kamboj}}} ~
-    \vspace{-5pt}
+    {\huge \textbf{\scshape Manpreet Singh}} \\[1mm]
+    \small Waterloo, ON $|$
+    (416) 930-4426
+    $|$ \href{mailto:sing2470@mylaurier.ca}{sing2470@mylaurier.ca} 
+    $|$ \href{https://www.linkedin.com/in/manpreet-swe/}{LinkedIn} 
+    $|$ \href{https://github.com/Manpreet-Singh-Kamboj}{GitHub}
+    $|$ \href{https://leetcode.com/u/Manpreet_03/}{LeetCode}
 \end{center}
+\vspace{-16pt}
 
- %-----------EDUCATION-----------
+
+%-----------EDUCATION-----------
 \section{Education}
-    \resumeSubHeadingListStart
-    \resumeSubheading
-      {Wilfrid Laurier University}{Sep 2025 -- Present (April 2027)}
-      {{\normalfont Master of Applied Computing (Co-op)}}
-  {{\normalfont Waterloo, Ontario, Canada}}
-  \resumeSubHeadingListEnd
-    \vspace{-10pt}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Chitkara University}{July 2021 -- August 2025}
-      {\normalfont Bachelor of Engineering (Computer Science)}{\normalfont CGPA: 9.23}
-  \resumeSubHeadingListEnd
-    \vspace{-9.5pt}
-%-----------Experience---------------
-\section{Work Experience}
-\vspace{3pt}
 \resumeSubHeadingListStart
-  \resumeSubheading{SalesCode.ai}{June 2024 -- December 2024}{Software Engineer Intern}{Gurugram, India} 
-  \resumeItemListStart
-    \resumeItem{Developed and deployed \textbf{Smart Advertisement Banners} featuring \textbf{geo-location targeting} and personalized recommendations for \textbf{500+} sales representatives, resulting in a \textbf{25\%} increase in user engagement, \textbf{15\%} higher click-through rates, and improved promotion visibility across the market.}
-    \resumeItem{Enhanced Flutter application \textbf{performance} by refactoring \textbf{15+ reusable widgets} and implementing lazy loading on HomeScreen, reducing app startup time by \textbf{30\%}, decreasing memory consumption by \textbf{40MB}, and improving widget rebuild efficiency by \textbf{60\%}.}
-    \resumeItem{Created and delivered a Skill Dashboard analytics module in \textbf{Flutter} for \textbf{500+} sales representatives, providing real-time insights on 4 key performance metrics, leading to a \textbf{20\%} improvement in team productivity.}
-  \resumeItemListEnd
+    \resumeSubheading
+      {Wilfrid Laurier University}{Sep 2025 -- Apr 2027}
+      {\normalfont Master of Applied Computing (Co-op)}{\normalfont GPA: 11.34 / 12}
+    \resumeSubheading
+      {Chitkara University}{Jul 2021 -- May 2025}
+      {\normalfont Bachelor of Engineering (Computer Science)}{\normalfont GPA: 3.7 / 4}
 \resumeSubHeadingListEnd
-\vspace{-15pt}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Home Hardware Stores Limited}{May 2026 -- Present}
+  {eCommerce Full Stack Developer Co-op}{St. Jacobs, ON}
+\resumeItemListStart
+    \resumeItem{Building frontend features for the \textbf{Home Hardware Pro Dashboard} using \textbf{Vue.js} and \textbf{Svelte}, delivering reusable UI components and user stories across \textbf{Agile sprints} for \textbf{Pro-enrolled stores}.}
+    \resumeItem{Engineered distributed ETL pipelines using \textbf{Microsoft Fabric} and \textbf{PySpark} to ingest \textbf{250K+ daily POS transactions} across \textbf{1,100+ nationwide stores}, systematically extracting offline pricing, quantity, and loyalty (Scene/Moneris) metrics.}
+    \resumeItem{Engineered a cross-cloud ingestion pipeline to compute offline mode prices, storing aggregations in a \textbf{Fabric Delta Table} and deployed a serverless \textbf{GCP Cloud Function} to perform incremental, timestamp-based syncing into \textbf{Cloud SQL}.}
+\resumeItemListEnd
+
+    \resumeSubheading
+      {CoreAI Technologies}{May 2025 -- Oct 2025}
+      {Full-Stack Software Developer}{Remote}
+    \resumeItemListStart
+        \resumeItem{Developed a high-performance health analytics dashboard using \textbf{Next.js}, \textbf{React}, and \textbf{TanStack Query}, optimizing API data fetching via custom caching layers to seamlessly visualize complex biomarker trends.}
+        \resumeItem{Designed a comprehensive biomarker categorization system structuring \textbf{400+ unique metrics} across cardiovascular, blood, and performance profiles, streamlining backend data retrieval and simplifying frontend user navigation.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {SalesCode.ai}{Jun 2024 -- Dec 2024}
+      {Software Engineer Intern}{Gurugram, India}
+    \resumeItemListStart
+        \resumeItem{Architected a geo-targeted banner delivery system using \textbf{Java (Spring Boot)} REST APIs, deployed on an auto-scaling \textbf{AWS EC2 and S3} infrastructure to dynamically serve localized content to \textbf{100K+ sales representatives}, driving a \textbf{15\% increase in click-through rates}.}
+        \resumeItem{Spearheaded performance engineering for the \textbf{Flutter} mobile client, refactoring widget rendering pipelines and implementing lazy loading patterns to reduce the application memory footprint by \textbf{over 30\% (from 89MB to 62MB)}.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Projects} 
-\vspace{-2pt}
-    \resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{MyTrackr - Receipt and Budget Manager} $|$ \emph{\href{https://github.com/Manpreet-Singh-Kamboj/my-trackr}{Source Code}}}{Java $|$ Android SDK $|$ Firebase $|$ ML Kit}
-\\[5mm]
-\resumeItemListStart
-    \resumeItem{Building an Android application in \textbf{Java} with \textbf{Firebase Authentication} (Google SSO), \textbf{Firestore database}, and \textbf{Firebase Storage} for receipt scanning, cloud-based storage, and personal budget tracking.}
-    \resumeItem{Integrating \textbf{Google ML Kit OCR} for real-time text recognition from camera and gallery images, extracting structured data (store, items, prices) and applying \textbf{AI-powered formatting} to standardize receipts across \textbf{10+ layouts}.}
-    \resumeItem{Developing budget management with automatic expense tracking, monthly monitoring, spending alerts, \textbf{AI-driven savings tips}, and \textbf{PDF export} for tax filing and records.}
-\resumeItemListEnd
- \vspace{-20pt}
- \resumeProjectHeading
-            {\textbf{{Study Adda}} $|$ \emph{\href{https://study-adda-edtech.vercel.app/}{Demo} { $|$ }\href{https://github.com/Manpreet3033/StudyAdda_LMS}{Source Code}}}{ReactJS $|$ MongoDB $|$ Express.js $|$ Node.js}
-            \\[5mm]
-          \resumeItemListStart
-            \resumeItem{Architected a full-stack \textbf{MERN} EdTech platform with \textbf{RESTful API} architecture, \textbf{MongoDB} database, \textbf{Express.js} backend, and \textbf{React.js} frontend, implementing a 3-tier architecture for scalability and optimized performance with \textbf{2-second} page load times.}
-            \resumeItem{Implemented a student portal with \textbf{JWT} authentication, \textbf{Razorpay} payment gateway integration, advanced course filtering across \textbf{10+} categories, and \textbf{Cloudinary} video streaming for seamless content delivery.}
-            \resumeItem{Built an instructor \textbf{dashboard} with full \textbf{CRUD} operations for course management, \textbf{Chart.js} visualizations for enrollment analytics, revenue tracking features, and a dynamic discount system with time-based pricing controls.}
-          \resumeItemListEnd
- \vspace{-17pt}
- \resumeProjectHeading
-{\textbf{{Facial Recognition Attendance System}} $|$ \emph{\href{https://github.com/Manpreet3033/Facial_Attendance_System}{Source Code}}}{Pandas $|$ Tkinter $|$ NumPy $|$ Python}
-\\[5mm]
-\resumeItemListStart
-    \resumeItem{Engineered a facial recognition attendance system using \textbf{Python}, \textbf{OpenCV}, and a face recognition library, achieving \textbf{95\%} facial detection accuracy, with \textbf{NumPy} for image processing and \textbf{Pandas} for attendance record management with \textbf{CSV} export.}
-    \resumeItem{Designed a \textbf{Tkinter} desktop GUI with a student registration module and real-time camera feed for live facial detection, reducing attendance logging time by \textbf{85\%}.}
-\resumeItemListEnd
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Qure} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-frontend}{Frontend}} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/qure-backend}{Backend}}}{Node.js, Express.js, React Native, PostgreSQL, Socket.IO, Redis, Docker}
+    \resumeItemListStart
+        \resumeItem{Developed a full-stack clinic queue management system using \textbf{Node.js}, \textbf{TypeScript}, and a \textbf{Socket.IO} room architecture to push live queue updates to patients and staff, securing user workflows with role-based \textbf{JWT} authentication.}
+        \resumeItem{Engineered fault-tolerant token management using atomic \textbf{PostgreSQL} transactions, and implemented a \textbf{BullMQ/Redis} caching pipeline that reduced asset upload latency by \textbf{70\%}, containerizing the application via \textbf{Docker} for Render deployment.}
+    \resumeItemListEnd
 
+    \resumeProjectHeading
+        {\textbf{PulseWatch} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/pulsewatch}{Source Code}}}{React, Node.js, Server-Sent Events (SSE), GenAI, Twilio, Docker}
+    \resumeItemListStart
+        \resumeItem{Built a real-time system monitoring platform utilizing a \textbf{React} frontend and \textbf{Node.js} backend to track API and website health, streaming live updates via \textbf{Server-Sent Events (SSE)} and using \textbf{GenAI} to generate incident summaries for faster debugging.}
+        \resumeItem{Implemented a multi-channel alerting pipeline routing production environment triggers to webhooks \textbf{(Slack, Discord)} and SMS (\textbf{Twilio}), significantly reducing team incident response times.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Skin Lesion Classification Platform} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/cp640-ml-skin-lesion-live-demo}{App Repo}} \textbar{} \emph{\href{https://github.com/Manpreet-Singh-Kamboj/cp640-ml-project/tree/main/skin-lesion-classification}{ML Model Repo}}}{Python, Flask, React (Vite), REST APIs}
+    \resumeItemListStart
+        \resumeItem{Trained a multi-task deep learning model on a highly imbalanced 7-class dataset, successfully achieving a \textbf{0.753 melanoma recall} and \textbf{0.928 AUC-ROC} to significantly outperform the 67\% naive baseline.}
+        \resumeItem{Deployed an end-to-end medical classification application by building a \textbf{Flask} backend and REST APIs to serve real-time model predictions to a responsive \textbf{React} frontend.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
-\vspace{-17.5pt}
 
+%-----------CERTIFICATIONS-----------
+\vspace{-5pt}
+\section{Certifications}
+ \begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, parsep=0pt, itemsep=0pt]
+    \small{\item{
+     \textbf{AWS Certified Cloud Practitioner} -- Amazon Web Services \textbar{} \href{https://www.credly.com/badges/ea8fc583-bf8d-4b39-acbc-a88e1e47d2cd/public_url}{Verify} \hfill May 2026
+    }}
+ \end{itemize}
+ \vspace{-6pt}
 
-  %-----------PROGRAMMING SKILLS-----------
+%-----------LEADERSHIP & ACTIVITIES-----------
+\vspace{-5pt}
+\section{Leadership \& Activities}
+\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt]
+    \item \textbf{Instructional Assistant (System Programming)}, Wilfrid Laurier University \hfill Jan 2026 -- Apr 2026 \\
+    \small{Served as a technical problem solver for \textbf{50+ students} on Shell scripting and C programming, evaluating labs for code quality, memory management, and algorithmic readability.}
+    \item \textbf{Startup Build Hackathon 2026 by Sheryians Coding School} \textbar{} \emph{2nd Runner-Up} \hfill Jun 2026 \\
+    \small{Built PulseWatch backend architecture in an agile, fast-paced hackathon environment under a strict 48-hour deadline.}
+\end{itemize}
+\vspace{-6pt}
+
+%-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{   
-     \textbf{Languages}{: Java, JavaScript, TypeScript, Python, Dart, SQL, C++, HTML5, CSS, XML} \\[1mm]
-     \textbf{Developer Tools}{: Git, GitHub, Android Studio, Maven, Gradle, Postman, Jira, Confluence, Firebase, Prisma, Supabase} \\[1mm]
-     \textbf{Libraries/Frameworks}{: Spring Boot, Android SDK, React.js, Next.js, Node.js, Express.js, React Native, Flutter, PostgreSQL, MongoDB, Pandas, NumPy} \\[1mm]
-     \textbf{Cloud \& DevOps}{: AWS (EC2, S3, Lambda), Docker, CI/CD, Agile/Scrum Methodology} \\[1mm]
-     \textbf{Core Competencies}{: Data Structures and Algorithms, Object-Oriented Design, RESTful API Development, Database Design, Agile/Scrum, Problem Solving} \\[1mm]
+\begin{itemize}[leftmargin=0.0in, label={}, topsep=0pt, parsep=0pt, itemsep=2pt]
+    \small{\item{
+        \textbf{Languages:} Java, Python, TypeScript, JavaScript, SQL, C++, Kotlin, Bash/Zsh \\
+        \textbf{Web \& Backend:} Node.js, Express, Spring Boot, React, Next.js, Vue.js, Svelte, Flask, Socket.IO, TanStack Query \\
+        \textbf{Cloud \& Infrastructure:} AWS (EC2, S3), GCP, Docker, PostgreSQL, MongoDB, Redis, Git \\
+        \textbf{Data \& ML:} PySpark, Pandas, NumPy, Scikit-Learn, Matplotlib
     }}
 \end{itemize}
- \vspace{-16pt}
- \vspace{3pt}
-\vspace{10pt}
 
-\vspace{-15pt}
-\end{document}Manpreet_Singh_Resume.pdf
-
-%---- Updated Resume -------------------------------------------------------------%
+\end{document}
